@@ -6,5 +6,5 @@ server:
     max-connections: 8192
 
 
-env: test
-authorization: xxx
+env:
+authorization: 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

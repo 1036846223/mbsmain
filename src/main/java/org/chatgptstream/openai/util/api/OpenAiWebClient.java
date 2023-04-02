@@ -67,7 +67,9 @@ public class OpenAiWebClient {
         HttpClient httpClient = HttpClient.create()
             .secure(sslContextSpec -> sslContextSpec.sslContext(finalSslContext))
             .tcpConfiguration(tcpClient -> tcpClient.proxy(proxy ->
-                proxy.type(ProxyProvider.Proxy.HTTP).host("127.0.0.1").port(7890)));
+                proxy.type(ProxyProvider.Proxy.HTTP).host("103.143.11.179").port(10000)));
+//        HttpClient httpClient = HttpClient.create()
+//                .secure(sslContextSpec -> sslContextSpec.sslContext(finalSslContext));
         //海外正式不需要代理
         ClientHttpConnector connector = new ReactorClientHttpConnector(httpClient);
         this.webClient = WebClient.builder().clientConnector(connector)
